@@ -4,7 +4,7 @@ resource "aws_vpn_connection" "vpn" {
   type                = "ipsec.1"
   static_routes_only  = true
   tags = {
-   Name        = "vgw-${var.name}"
+   Name        = "vpn-${var.name}"
    Client = var.client
    Domain = var.domain
    Environment = var.environment
