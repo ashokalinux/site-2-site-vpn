@@ -9,6 +9,9 @@ resource "aws_vpn_connection" "vpn" {
    Domain = var.domain
    Environment = var.environment
     }
+   lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "aws_vpn_connection_route" "office" {
